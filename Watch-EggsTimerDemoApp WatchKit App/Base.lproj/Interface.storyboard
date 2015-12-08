@@ -12,7 +12,11 @@
                     <items>
                         <group width="1" alignment="center" id="7HU-CU-Jyr">
                             <items>
-                                <button width="32" height="40" alignment="left" verticalAlignment="center" backgroundImage="Yellow" id="nn3-LA-2s3"/>
+                                <button width="32" height="40" alignment="left" verticalAlignment="center" backgroundImage="Yellow" id="nn3-LA-2s3">
+                                    <connections>
+                                        <action selector="yellowButtonPressed" destination="AgC-eL-Hgc" id="j33-Mk-KgL"/>
+                                    </connections>
+                                </button>
                                 <label alignment="left" text="Liquid" id="Msw-Fd-hfK"/>
                                 <label alignment="right" verticalAlignment="bottom" text="3:59" textAlignment="right" id="PH3-gC-TR7">
                                     <fontDescription key="font" type="system" pointSize="12"/>
@@ -36,7 +40,11 @@
                         </group>
                         <group width="1" alignment="center" verticalAlignment="center" id="AaS-lZ-ahe">
                             <items>
-                                <button width="32" height="40" alignment="left" verticalAlignment="center" backgroundImage="Orange" id="zcQ-aZ-Yxf"/>
+                                <button width="32" height="40" alignment="left" verticalAlignment="center" backgroundImage="Orange" id="zcQ-aZ-Yxf">
+                                    <connections>
+                                        <action selector="orangeButtonPressed" destination="AgC-eL-Hgc" id="Gyx-gL-LSK"/>
+                                    </connections>
+                                </button>
                                 <label alignment="left" text="Soft" id="srW-aP-lc5"/>
                                 <label alignment="right" verticalAlignment="bottom" text="4:52" textAlignment="right" id="yOF-SB-fbg">
                                     <fontDescription key="font" type="system" pointSize="12"/>
@@ -60,7 +68,11 @@
                         </group>
                         <group width="1" alignment="center" verticalAlignment="bottom" id="95F-8i-oRK">
                             <items>
-                                <button width="32" height="40" alignment="left" verticalAlignment="center" backgroundImage="Red" id="cVh-hL-IrA"/>
+                                <button width="32" height="40" alignment="left" verticalAlignment="center" backgroundImage="Red" id="cVh-hL-IrA">
+                                    <connections>
+                                        <action selector="redButtonPressed" destination="AgC-eL-Hgc" id="CBS-hc-HsX"/>
+                                    </connections>
+                                </button>
                                 <label alignment="left" text="Hard" id="BQQ-fa-fVQ"/>
                                 <label alignment="right" verticalAlignment="bottom" text="6:02" textAlignment="right" id="6FV-P1-23T">
                                     <fontDescription key="font" type="system" pointSize="12"/>
@@ -93,6 +105,14 @@
                             <include reference="95F-8i-oRK"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <outlet property="hardTimeLabel" destination="6FV-P1-23T" id="g11-Rb-Usy"/>
+                        <outlet property="liquidTimeLabel" destination="PH3-gC-TR7" id="Qe6-zq-ir1"/>
+                        <outlet property="orangeButton" destination="zcQ-aZ-Yxf" id="cjD-TD-zRS"/>
+                        <outlet property="redButton" destination="cVh-hL-IrA" id="N5P-qp-oCw"/>
+                        <outlet property="softTimeLabel" destination="yOF-SB-fbg" id="ulJ-e0-Yg3"/>
+                        <outlet property="yellowButton" destination="nn3-LA-2s3" id="z89-bc-fI0"/>
+                    </connections>
                 </controller>
             </objects>
         </scene>
