@@ -10,6 +10,11 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_EggsTimerDemoApp_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <button width="1" height="1" alignment="left" hidden="YES" title="Ready!" id="Ilf-NK-oKU">
+                            <connections>
+                                <action selector="readyButtonPressed" destination="AgC-eL-Hgc" id="O3Z-W2-npy"/>
+                            </connections>
+                        </button>
                         <group width="1" alignment="center" id="7HU-CU-Jyr">
                             <items>
                                 <button width="32" height="40" alignment="left" verticalAlignment="center" backgroundImage="Yellow" id="nn3-LA-2s3">
@@ -97,11 +102,13 @@
                     </items>
                     <variation key="default">
                         <mask key="items">
+                            <exclude reference="Ilf-NK-oKU"/>
                             <exclude reference="95F-8i-oRK"/>
                         </mask>
                     </variation>
                     <variation key="device=watch42mm">
                         <mask key="items">
+                            <include reference="Ilf-NK-oKU"/>
                             <include reference="95F-8i-oRK"/>
                         </mask>
                     </variation>
@@ -109,6 +116,7 @@
                         <outlet property="hardTimeLabel" destination="6FV-P1-23T" id="g11-Rb-Usy"/>
                         <outlet property="liquidTimeLabel" destination="PH3-gC-TR7" id="Qe6-zq-ir1"/>
                         <outlet property="orangeButton" destination="zcQ-aZ-Yxf" id="cjD-TD-zRS"/>
+                        <outlet property="readyButton" destination="Ilf-NK-oKU" id="8ru-dv-jPT"/>
                         <outlet property="redButton" destination="cVh-hL-IrA" id="N5P-qp-oCw"/>
                         <outlet property="softTimeLabel" destination="yOF-SB-fbg" id="ulJ-e0-Yg3"/>
                         <outlet property="yellowButton" destination="nn3-LA-2s3" id="z89-bc-fI0"/>

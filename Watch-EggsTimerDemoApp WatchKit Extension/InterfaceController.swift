@@ -21,6 +21,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var yellowButton: WKInterfaceButton!
     @IBOutlet var orangeButton: WKInterfaceButton!
     @IBOutlet var redButton: WKInterfaceButton!
+    @IBOutlet var readyButton: WKInterfaceButton!
     
     var timer = NSTimer()
     var liquidCount = 239
@@ -91,6 +92,8 @@ class InterfaceController: WKInterfaceController {
         self.hardTimeLabel.setText("\(hardCount) sec")
     }
 }
+    @IBAction func readyButtonPressed() {
+    }
 
 }
 
