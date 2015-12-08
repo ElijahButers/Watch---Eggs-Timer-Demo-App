@@ -22,6 +22,11 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var orangeButton: WKInterfaceButton!
     @IBOutlet var redButton: WKInterfaceButton!
     
+    var timer = NSTimer()
+    var liquidCount = 239
+    var softcount = 292
+    var hardCount = 362
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
