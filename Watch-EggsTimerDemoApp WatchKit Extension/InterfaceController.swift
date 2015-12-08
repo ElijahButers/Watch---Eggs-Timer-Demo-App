@@ -45,12 +45,18 @@ class InterfaceController: WKInterfaceController {
     
     //Actions
     @IBAction func yellowButtonPressed() {
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("resultLiquid"), userInfo: nil, repeats: true)
     }
 
     @IBAction func orangeButtonPressed() {
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("resultSoft"), userInfo: nil, repeats: true)
     }
     
     @IBAction func redButtonPressed() {
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("resultHard"), userInfo: nil, repeats: true)
     }
     
     
