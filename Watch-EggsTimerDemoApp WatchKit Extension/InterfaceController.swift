@@ -24,7 +24,7 @@ class InterfaceController: WKInterfaceController {
     
     var timer = NSTimer()
     var liquidCount = 239
-    var softcount = 292
+    var softCount = 292
     var hardCount = 362
     
     override func awakeWithContext(context: AnyObject?) {
@@ -59,6 +59,44 @@ class InterfaceController: WKInterfaceController {
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("resultHard"), userInfo: nil, repeats: true)
     }
     
+    func resultLiquid() {
+        
+        if liquidCount == 0 {
+            self.liquidTimeLabel.setText("\(liquidCount) sec")
+            timer.invalidate()
+        } else {
+            liquidCount--
+            self.liquidTimeLabel.setText("\(liquidCount) sec")
+        }
+    }
     
+    func resultSoft() {
+        
+        if softCount == 0 {
+            self.softTimeLabel.setText("\(softCount) sec")
+            timer.invalidate()
+        } else {
+            softCount--
+            self.softTimeLabel.setText("\(softCount) sec")
+        }
+    }
+
+    func resultHard() {
     
+    if hardCount == 0 {
+        self.hardTimeLabel.setText("\(hardCount) sec")
+        timer.invalidate()
+    } else {
+        hardCount--
+        self.hardTimeLabel.setText("\(hardCount) sec")
+    }
 }
+
+}
+
+
+
+
+
+    
+
