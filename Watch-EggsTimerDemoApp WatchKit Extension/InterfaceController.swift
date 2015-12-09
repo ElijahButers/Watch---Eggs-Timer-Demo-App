@@ -65,8 +65,8 @@ class InterfaceController: WKInterfaceController {
         if liquidCount == 0 {
             self.liquidTimeLabel.setText("\(liquidCount) sec")
             timer.invalidate()
-            self.readyButton.setHidden(false)
             
+            self.readyButton.setHidden(false)
             let yellowCollor = UIColor(red: 250.0/255, green: 181.0/255, blue: 11.0/255, alpha: 1.0)
             self.readyButton.setBackgroundColor(yellowCollor)
         } else {
@@ -81,8 +81,13 @@ class InterfaceController: WKInterfaceController {
         if softCount == 0 {
             self.softTimeLabel.setText("\(softCount) sec")
             timer.invalidate()
+            
+            self.readyButton.setHidden(false)
+            let orangeCollor = UIColor(red: 255.0/255, green: 130.0/255, blue: 17.0/255, alpha: 1.0)
+            self.readyButton.setBackgroundColor(orangeCollor)
         } else {
             softCount--
+            self.orangeButton.setEnabled(false)
             self.softTimeLabel.setText("\(softCount) sec")
         }
     }
