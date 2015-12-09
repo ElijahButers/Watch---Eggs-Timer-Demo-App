@@ -24,9 +24,9 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var readyButton: WKInterfaceButton!
     
     var timer = NSTimer()
-    var liquidCount = 239
-    var softCount = 292
-    var hardCount = 362
+    var liquidCount = 10 //239
+    var softCount = 10 //292
+    var hardCount = 10 //362
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -65,8 +65,13 @@ class InterfaceController: WKInterfaceController {
         if liquidCount == 0 {
             self.liquidTimeLabel.setText("\(liquidCount) sec")
             timer.invalidate()
+            self.readyButton.setHidden(false)
+            
+            let yellowCollor = UIColor(red: 250.0/255, green: 181.0/255, blue: 11.0/255, alpha: 1.0)
+            self.readyButton.setBackgroundColor(yellowCollor)
         } else {
             liquidCount--
+            self.yellowButton.setEnabled(false)
             self.liquidTimeLabel.setText("\(liquidCount) sec")
         }
     }
