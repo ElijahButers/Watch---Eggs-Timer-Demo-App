@@ -97,8 +97,13 @@ class InterfaceController: WKInterfaceController {
     if hardCount == 0 {
         self.hardTimeLabel.setText("\(hardCount) sec")
         timer.invalidate()
+        
+        self.readyButton.setHidden(false)
+        let redCollor = UIColor(red: 227.0/255, green: 36.0/255, blue: 24.0/255, alpha: 1.0)
+        self.readyButton.setBackgroundColor(redCollor)
     } else {
         hardCount--
+        self.redButton.setEnabled(false)
         self.hardTimeLabel.setText("\(hardCount) sec")
     }
 }
