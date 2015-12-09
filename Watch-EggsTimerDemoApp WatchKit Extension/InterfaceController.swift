@@ -108,6 +108,15 @@ class InterfaceController: WKInterfaceController {
     }
 }
     @IBAction func readyButtonPressed() {
+        
+        self.liquidTimeLabel.setText("3:59")
+        self.softTimeLabel.setText("4:52")
+        self.hardTimeLabel.setText("6:02")
+        
+        self.readyButton.setHidden(true)
+        self.yellowButton.setEnabled(true)
+        self.orangeButton.setEnabled(true)
+        self.redButton.setEnabled(true)
     }
 
 }
